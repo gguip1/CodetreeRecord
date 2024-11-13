@@ -28,6 +28,8 @@ for index, value in enumerate(command):
                 min_ = v
                 min_index = i
 
+        for i, v in enumerate(mountains[0]):
+
             if position == value[1] - 1:
                 position = min_index
                 max_ = mountains[0][position]
