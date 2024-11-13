@@ -8,7 +8,7 @@ for i in range(N):
     map_.append(list(map(int, input().split())))
 
 dir_ = 'N'
-position = [int(round(N/2, 0)), int(round(N/2, 0))]
+position = [int(round((N - 1)/2)), int(round((N - 1)/2))]
 
 score = map_[position[1]][position[0]]
 
