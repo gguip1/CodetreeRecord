@@ -8,7 +8,7 @@ for i in range(N):
     map_.append(list(map(int, input().split())))
 
 dir_ = 'N'
-position = [1, 1]
+position = [int(round(N/2, 0)), int(round(N/2, 0))]
 
 score = map_[position[1]][position[0]]
 
@@ -55,6 +55,5 @@ for i in range(T):
         dir_ = dir_controllerR(dir_)
     elif command[0][i] == 'F':
         position, score = position_controller(position, dir_, score)
-        
 
 print(score)
