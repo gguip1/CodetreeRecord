@@ -74,7 +74,7 @@ for index, value in enumerate(command):
 
         for i, v in enumerate(mountains[0]):
 
-            if position == value[1]:
+            if position == value[1] - 1:
                 score += 1000000
 
                 v_c_t = 0
@@ -126,14 +126,14 @@ for index, value in enumerate(command):
             if max_ < mountains[0][position + 1]:
 
                 # if len(mountains[0]) == 11:
-                #     print(f'before : score[{score}] max_[{max_}] position[{position}]')
+                # print(f'before : score[{score}] max_[{max_}] position[{position}]')
 
                 score += 1000000
 
                 max_ = mountains[0][position + 1]
 
             # if len(mountains[0]) == 11:
-            #     print(f'after : score[{score}] max_[{max_}] position[{position}]')
+                # print(f'after : score[{score}] max_[{max_}] position[{position}]')
             
             position += 1
 
