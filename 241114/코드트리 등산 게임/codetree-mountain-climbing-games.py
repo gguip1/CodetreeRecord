@@ -27,7 +27,7 @@ for index, value in enumerate(command):
                 v_c_t = 0
                 v_index = 0
 
-                for j in range(0, value[1]):
+                for j in range(0, len(mountains[0])):
                     v_c = 0
                     for i_, v_ in enumerate(mountains[0][j:]):
                         if mountains[0][j] < v_:
