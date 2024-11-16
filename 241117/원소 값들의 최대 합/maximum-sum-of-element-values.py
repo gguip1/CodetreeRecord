@@ -10,13 +10,13 @@ for i in range(n):
     for j in range(m):
         if index == None:
             index = i
-            max__ += _[index]
-            continue
 
         max__ += _[index]
         index = _[index] - 1
     
     if max__ > max_:
         max_ = max__
+    
+    # print(max_)
 
 print(max_)
