@@ -1,19 +1,17 @@
+from collections import deque
+
 n = int(input())
 a = list(map(int, input().split()))
 a.reverse()
 
-result_array = [None] * n
-size = 0
+result_deque = deque()
 
 for index, value in enumerate(a):
     if value == 1:
-        result_array[1:size+1] = result_array[0:size]
-        result_array[0] = index + 1
+        result_deque.appendleft(index + 1)  # 맨 앞에 삽입
     elif value == 2:
-        result_array[2:size+1] = result_array[1:size]
-        result_array[1] = index + 1
+        result_deque.insert(1, index + 1)  # 두 번째에 삽입
     elif value == 3:
-        result_array[size] = index + 1
-    size += 1
+        result_deque.append(index + 1)  # 맨 뒤에 삽입
 
-print(" ".join(map(str, result_array[:size])))
+print(" ".join(map(str, result_deque)))
