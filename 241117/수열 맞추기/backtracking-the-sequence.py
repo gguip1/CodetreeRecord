@@ -1,12 +1,12 @@
 n = int(input())
 a = list(map(int, input().split()))
+a.reverse()
 
 array_ = []
 
 for i in range(n):
     array_.append(i + 1)
 
-a.reverse()
 result_array = []
 
 for index, value in enumerate(a):
