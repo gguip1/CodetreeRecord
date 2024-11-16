@@ -12,9 +12,9 @@ for i in range(n):
             index = i
             max__ += _[index]
             continue
-            
-        max__ += _[index - 1]
-        index = _[index - 1]
+
+        max__ += _[index]
+        index = _[index] - 1
     
     if max__ > max_:
         max_ = max__
