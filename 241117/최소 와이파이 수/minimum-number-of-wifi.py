@@ -2,18 +2,21 @@ n, m = map(int, input().split())
 
 _live = list(map(int, input().split()))
 
-wifi_ = 0
-sum_live = 0
+range_ = (1 + 2 * m)
+index_ = n // range_
 
-for index, value in enumerate(_live):
-    if value == 1 and sum_live < (1 + 2 * m):
-        sum_live += 1
-        if sum_live == (1 + 2 * m):
-            wifi_ += 1
-            sum_live = 0
-    elif value == 0:
+wifi_ = 0
+
+for i in range(index_):
+    c_0 = 0
+    for j in _live[i * range_ : ((i + 1) * range_) - 1]:
+        if j == 1:
+            continue
+        else:
+            c_0 += 1
+    if c_0 == range_:
+        continue
+    else:
         wifi_ += 1
 
-
 print(wifi_)
-
