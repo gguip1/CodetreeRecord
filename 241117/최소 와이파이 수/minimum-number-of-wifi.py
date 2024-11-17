@@ -9,7 +9,7 @@ wifi_ = 0
 
 for i in range(index_):
     c_0 = 0
-    for j in _live[i * range_ : ((i + 1) * range_) - 1]:
+    for j in _live[i * range_ : ((i + 1) * range_)]:
         if j == 1:
             continue
         else:
