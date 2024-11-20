@@ -1,10 +1,10 @@
-result = 0
+result = 1
 
 for i in range(5):
     n = int(input())
 
-    if n % 3 == 0 and n != 0:
-        result = 1
+    if n % 3 != 0:
+        result = 0
         break
 
 print(result)
