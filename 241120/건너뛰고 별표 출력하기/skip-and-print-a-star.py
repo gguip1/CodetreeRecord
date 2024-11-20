@@ -6,7 +6,7 @@ for i in range(n):
 
     print()
 
-    if (i + 1) == 5:
+    if (i + 1) == n:
 
         for j in range(n - 1, 0, -1):
 
