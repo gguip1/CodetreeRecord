@@ -3,7 +3,7 @@ result = 0
 for i in range(5):
     n = int(input())
 
-    if n % 3 == 0:
+    if n % 3 == 0 and n != 0:
         result = 1
         break
 
