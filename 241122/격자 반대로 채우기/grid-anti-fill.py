@@ -9,12 +9,20 @@ value = 1
 
 for i in range(n):
     for j in range(n):
-        if (n - i - 1) % 2 != 0:
-            arr_2d[n - j - 1][n - i - 1] = value
-            value += 1
+        if n % 2 == 0:
+            if (n - i - 1) % 2 != 0:
+                arr_2d[n - j - 1][n - i - 1] = value
+                value += 1
+            else:
+                arr_2d[j][n - i - 1] = value
+                value += 1
         else:
-            arr_2d[j][n - i - 1] = value
-            value += 1
+            if (n - i - 1) % 2 == 0:
+                arr_2d[n - j - 1][n - i - 1] = value
+                value += 1
+            else:
+                arr_2d[j][n - i - 1] = value
+                value += 1
 
 for i in range(n):
     for j in range(n):
