@@ -7,7 +7,7 @@ arr = [
 ]
 
 for _ in arr:
-    print(sum(_) / m, end=' ')
+    print(f'{sum(_) / m:.1f}', end=' ')
 print()
 
 
@@ -15,10 +15,10 @@ for i in range(m):
     sum_ = 0
     for j in range(n):
         sum_ += arr[j][i]
-    print(sum_ / n, end=' ')
+    print(f'{sum_ / n:.1f}', end=' ')
 print()
 
 sum_ = 0
 for _ in arr:
     sum_ += sum(_)
-print(sum_ / (m * n))
+print(f'{sum_ / (m * n):.1f}')
