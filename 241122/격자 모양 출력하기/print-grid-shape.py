@@ -10,14 +10,11 @@ arr_2d = [
     for _ in range(n)
 ]
 
-index = 1
-
 for i in range(n):
     for j in range(n):
         for _ in position:
             if i + 1 == _[1] and j + 1 == _[0]:
-                arr_2d[_[0] - 1][_[1] - 1] = index
-        index += 1
+                arr_2d[_[0] - 1][_[1] - 1] = _[0] * _[1]
         print(arr_2d[i][j], end=' ')
     print()
 
