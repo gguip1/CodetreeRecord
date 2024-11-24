@@ -1,6 +1,6 @@
 c = input()
 
 if c == 'z':
-    print(a)
+    print('a')
 else:
     print(chr(ord(c) + 1))
