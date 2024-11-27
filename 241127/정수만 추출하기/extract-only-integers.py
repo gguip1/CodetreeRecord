@@ -16,11 +16,8 @@ for i in range(len(문자열_1)):
         if i == len(문자열_1) - 1:
             sum_ += int(previous)
     else:
-        if previous == '':
-            continue
-        else:
-            sum_ += int(previous)
-            previous = ''
+        sum_ += int(previous)
+        break
 
 previous = ''
 
@@ -30,10 +27,8 @@ for i in range(len(문자열_2)):
         if i == len(문자열_2) - 1:
             sum_ += int(previous)
     else:
-        if previous == '':
-            continue
-        else:
-            sum_ += int(previous)
-            previous = ''
+        sum_ += int(previous)
+        break
+
 
 print(sum_)
