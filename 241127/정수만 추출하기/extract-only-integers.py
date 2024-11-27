@@ -10,20 +10,30 @@ sum_ = 0
 
 previous = ''
 
-for i in 문자열_1:
-    if isInt(i):
-        previous += i
+for i in range(len(문자열_1)):
+    if isInt(문자열_1[i]):
+        previous += 문자열_1[i]
+        if i == len(문자열_1) - 1:
+            sum_ += int(previous)
     else:
-        sum_ += int(previous)
-        previous = ''
+        if previous == '':
+            continue
+        else:
+            sum_ += int(previous)
+            previous = ''
 
 previous = ''
 
-for i in 문자열_2:
-    if isInt(i):
-        previous += i
+for i in range(len(문자열_2)):
+    if isInt(문자열_2[i]):
+        previous += 문자열_2[i]
+        if i == len(문자열_2) - 1:
+            sum_ += int(previous)
     else:
-        sum_ += int(previous)
-        previous = ''
+        if previous == '':
+            continue
+        else:
+            sum_ += int(previous)
+            previous = ''
 
 print(sum_)
