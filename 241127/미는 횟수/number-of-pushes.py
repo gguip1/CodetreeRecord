@@ -5,7 +5,7 @@ count = 0
 check = False
 
 for i in range(len(A)):
-    A = A[1:len(A)] + A[0]
+    A = A[len(A) - 1] + A[0:len(A) - 1] 
     count += 1
     if A == B:
         check = True
