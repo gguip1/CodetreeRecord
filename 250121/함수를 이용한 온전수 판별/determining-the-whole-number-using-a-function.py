@@ -9,7 +9,7 @@ def is_perfect_num(num):
     if num % 10 == 5:
         return False
     
-    if num % 3 == 0 and num % 9 == 0:
+    if num % 3 == 0 and num % 9 != 0:
         return False
     
     return True
