@@ -1,7 +1,7 @@
 string = input()
 target = input()
 
-start_index = 0
+start_index = -1
 
 for i in range(len(string)):
 
@@ -9,13 +9,10 @@ for i in range(len(string)):
         if string[i + j] == target[j]:
             start_index = i
         else:
-            start_index = 0
+            start_index = -1
             break
     
-    if start_index != 0:
+    if start_index != -1:
         break
 
-if start_index != 0:
-    print(start_index)
-else:
-    print(-1)
+print(start_index)
