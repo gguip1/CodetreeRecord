@@ -1,17 +1,13 @@
 N = int(input())
 
-count = 0
-
-def func(n):
-    global count
+def func(n, count=0):
     if n == 1:
-        return 
+        return count 
     else:
         count += 1
         if n % 2 == 0:
-            func(n // 2)
+            return func(n // 2, count)
         else:
-            func(n // 3)
+            return func(n // 3, count)
 
-func(N)
-print(count)
+print(func(N))
