@@ -27,14 +27,15 @@ def kvm(parent:list, pattern:list):
     count = 0
 
     j = 0
-    for i in range(1, parentSize):
+    for i in range(parentSize):
         while(j > 0 and parent[i] != pattern[j]):
             j = table[j - 1]
         if parent[i] == pattern[j]:
-            j = table[j]
-            count += 1
-        else:
-            j += 1
+            if j == patternSize - 1:
+                j = table[j]
+                count += 1
+            else:
+                j += 1
     
     return count
 
