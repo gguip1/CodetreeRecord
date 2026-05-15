@@ -45,7 +45,7 @@ def backtracking(cnt):
 
         bomb_grid[y][x] = i
         backtracking(cnt + 1)
-        bomb_grid[y][x] = 0
+        # bomb_grid[y][x] = 0
 
 for y in range(n):
     for x in range(n):
